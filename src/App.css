@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .title {
+    font-size: 32px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .sheet {
+    width: 80%;
+    overflow: auto;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #ccc;
+    border-radius: 24px;
+    padding: 20px;
+    box-sizing: border-box;
   }
-}
+  .addButton{
+    border: 6px solid #35a18b;
+    background-color: #3eedc9;
+    position: fixed;
+    bottom:10px;
+    width: 100px;
+    height: 100px;
+    color: white;
+    border-radius: 99px;
+    right:10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+  .addButton .fa-solid {
+    font-size: 40px;
+  }
+  .addButton:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05);
+  }
+  
+  .addButton:active {
+    transform: scale(0.95);
+  }
+  
+
+  @media (max-width: 1200px) {
+    .sheet {
+      height: 600px;
+    }
+    
+  }
+  
+  @media (max-width: 900px) {
+    .sheet {
+      height: fit-content;
+    }
+    .addButton{
+    width: 80px;
+    height: 80px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .sheet {
+      height: fit-content;
+      padding: 0;
+      width: 95%;
+    }
+    .addButton{
+
+    width: 60px;
+    height: 60px;
+    }
+  }
