@@ -13,8 +13,8 @@ const CounterBar = ({
   return (
     <>
       <div className="counter-bar">
-        <p className="text name">{name}</p>
-        <p className="text value">{counter}</p>
+        <p className="text name">{isTitle?"Nome":name}</p>
+        <p className="text value">{isTitle?"Valor":counter}</p>
         <div className="button-container">
           {isTitle ? (
             <p className="text header">Ajustes</p>

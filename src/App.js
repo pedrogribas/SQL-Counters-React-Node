@@ -63,6 +63,7 @@ function App() {
       <div className="root">
         <h1 className="title">Contadores</h1>
         <div className="sheet">
+          <CounterBar isTitle/>
           {counters &&
             counters.map((contador) => (
               <CounterBar
